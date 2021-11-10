@@ -1,27 +1,17 @@
-import Observer.carro.CarroPolicia
+import Observer.car.CarPolice
 
 fun main(){
-//    //subject / observable
-//    val dieta = Dieta()
-//    //observer
-//    val peso100 = BalancaDieta()
-//    val peso70 = BalancaDieta()
-//
-//    dieta.registerObserver(peso100)
-//    peso100.update(100.00)
-//    dieta.registerObserver(peso70)
-//    peso70.update(70.00)
 
     //observado
-    val carroRoubado = CarroRoubado()
+    val stolenCar = CarTief()
     //observador
-    val carroPolicia = CarroPolicia()
+    val carPolice = CarPolice()
 
-    carroRoubado.registerObserver(carroPolicia)
-    carroRoubado.emfrente()
-    carroRoubado.direita()
-    carroRoubado.esquerda()
-    carroRoubado.para()
+    stolenCar.registerObserver(carPolice)
+    stolenCar.go()
+    stolenCar.right()
+    stolenCar.left()
+    stolenCar.stop()
 
 
 }
